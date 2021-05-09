@@ -10,7 +10,9 @@ const Routes = (props) => {
     <Router>
       <Switch>
         {/*Public Routes */}
-            <Route exact path="/" component={RepairDeskHome} />
+            <Route path="/login" exact component={RepairDeskHome} />
+            <Route path="/register" exact component={RepairDeskHome} />
+            <Route path="/" exact component={RepairDeskHome} />
         {/*Public Routes End */}
 
         {/* Admin Routes */}
@@ -23,7 +25,7 @@ const Routes = (props) => {
         {/* Admin Routes End */}
 
         <ProtectedRoute
-          exact={false}
+          exact={true}
           path="/home"
           component={Home}
         />

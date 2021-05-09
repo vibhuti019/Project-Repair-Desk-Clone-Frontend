@@ -47,7 +47,7 @@
     width: 100%;
     border: 1px solid #93c7e6;
     box-shadow: 0 0 0 1px #3089c5;
-    padding: 14px;
+    padding: 10px;
     height: auto;
     border-radius: 4px;
     margin-bottom: 0;
@@ -65,13 +65,13 @@
     color: #fff;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    line-height: 20px;
+    line-height: 14px;
     display: unset;
 }
 .headLabel{
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     display: block;
     font-weight: 400;
@@ -80,20 +80,10 @@
     box-sizing: border-box;
     color: #fff;
 }
-.normalText{
-    line-height: 20px;
-    font-size: 17px;
-    color: #fff;
-    margin-top: 10px;
-}
-.normalText:hover{
-    text-decoration: underline;
-    outline: 0;
-    color: #005580;
-}
 .buttonAction{
-    width: 295px;
-    height: 58px;
+    margin-top: 20px;
+    width: 175px;
+    height: 45px;
     box-shadow: none;
     border-color: #fff;
     background-color: #2983c5;
@@ -106,12 +96,10 @@
     border-radius: 4px;
     vertical-align: middle;
     box-sizing: border-box;
-    margin-top: 20px;
     color: #fff;
 }
 .buttonAction:hover{
     box-shadow: 0 0 5px rgba(40,52,177,.57) inset !important;
-    color: #fff;
     text-decoration: none;
 }
 @media only screen and (max-device-width: 780px) {
