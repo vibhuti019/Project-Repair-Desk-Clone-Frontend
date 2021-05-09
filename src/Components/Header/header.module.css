@@ -1,0 +1,22 @@
+import React,{ Component } from 'react'
+import Rectangle10 from '../../assets/Rectangle10.png'
+import logo2x from '../../assets/logo@2x.png'
+import styles from './style.module.css'; 
+
+export default class ItemCard extends Component{
+
+    render(){
+        return (
+        <div className={  styles.back }>
+            <div className={  styles.padding }>
+                <img className={  styles.coverImage } src={ Rectangle10 } />
+                <div className={  styles.lightFont }><img className={  styles.innerImage } src={ logo2x } />{this.props.GardenName}</div>
+                <div className={  styles.fruitName }>{this.props.FruitName}</div>
+                <div className={  styles.lightFontLowMargin }>per 1 lb</div>
+                <div className={  styles.price }>${this.props.Price}</div>
+            </div>
+        </div> 
+        )
+    } 
+
+}

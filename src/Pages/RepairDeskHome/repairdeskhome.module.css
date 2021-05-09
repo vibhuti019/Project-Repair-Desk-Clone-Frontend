@@ -1,0 +1,96 @@
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+}
+.mainContainer{
+    width: 50vw;
+    height: 100vh;
+    background-color: #2d80bf;
+    display: inline-flex;
+    overflow-y: hidden;
+    justify-content: center;
+}
+.advtContainer{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    overflow-y: hidden;  
+    justify-content: center;  
+}
+.imageContainer{
+    width: 35vw;
+    height: 35vw;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+}
+.image{
+    width: 100%;
+    height: 90%;
+    background-color: #2d80bf;
+}
+.new{
+    width: 10px;
+    height: 10px;
+    justify-self: center;
+    text-indent: -999px;
+    cursor: pointer;
+    margin: 2px;
+    /* background-color: #64afd9;  if selected*/
+    background-color: transparent;
+    border: 1px solid #2110bf;
+    border-radius: 10px;
+}
+.newSelected{
+    width: 10px;
+    height: 10px;
+    justify-self: center;
+    text-indent: -999px;
+    cursor: pointer;
+    margin: 2px;
+    background-color: #64afd9;
+    border: 2px solid #2110bf;
+    border-radius: 10px;
+}
+.carousalContainer{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+.loginRegister{
+    width: 35vw;
+    height: 35vw;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+}
+.button{
+    width: 50%;
+    font-family: 'Open Sans', sans-serif;
+    justify-self: center;
+    cursor: pointer;
+    margin: 2px;
+    /* background-color: #64afd9;  if selected*/
+    background-color: transparent;
+    border-radius: 10px;
+    color: #f8ffff;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+.buttonSelected{
+    width: 50%;
+    font-family: 'Open Sans', sans-serif;
+    justify-self: center;
+    cursor: pointer;
+    margin: 2px;
+    /* background-color: #64afd9;  if selected*/
+    background-color: rgba(1, 1, 1, 0.13);
+    border-radius: 14px;
+    color: #f8ffff;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
