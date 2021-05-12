@@ -9,8 +9,8 @@ export default class RegisterComponent extends React.Component{
         return(
             <div className={ styles.loginRegister }>
                 <div className = { styles.carousalContainer }>
-                    <div onClick={ ()=>{window.location.href='/login'} } className = { styles.button }>Login</div>
-                    <div onClick={ ()=>{window.location.href='/register'} } className = { styles.buttonSelected }>Register</div>
+                    <Link className = { styles.button } to="/login">Login</Link>
+                    <Link className = { styles.buttonSelected } to="/register">Register</Link>
                 </div>
                 <div className={ styles.inputContainer }>
                     <label className={ styles.headLabel }>Full Name</label>

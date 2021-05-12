@@ -4,13 +4,20 @@ import styles from "./login.module.css";
 
 
 export default class LoginComponent extends React.Component{
+    constructor(props) {
+        super(props);
+     
+        this.state = {
+          isShow: true,
+        };
+      }
 
     render(){
         return(
             <div className={ styles.loginRegister }>
                 <div className = { styles.carousalContainer }>
-                    <div onClick={ ()=>{window.location.href='/login'} } className = { styles.buttonSelected }>Login</div>
-                    <div onClick={ ()=>{window.location.href='/register'} } className = { styles.button }>Register</div>
+                    <Link className = { styles.buttonSelected } to="/login">Login</Link>
+                    <Link className = { styles.button } to="/register">Register</Link>
                 </div>
                 <div className = { styles.head } >Login to your account</div>
                 <div className={ styles.inputContainer }>
@@ -28,3 +35,4 @@ export default class LoginComponent extends React.Component{
     }
 
 }
+// onClick={ ()=>{window.location.href='/register'} }

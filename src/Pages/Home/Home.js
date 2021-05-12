@@ -10,6 +10,7 @@ export default class Home extends React.Component{
     logout(){
         localStorage.setItem('loggedIn', 'false');
         this.setState(this.state)
+        window.location.href = "/"
     }
 
     render(){

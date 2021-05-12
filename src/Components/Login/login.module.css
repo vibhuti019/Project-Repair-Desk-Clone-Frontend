@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .button {
+    all:unset;
     font-size: 25px;
     width: 50%;
     font-family: 'Open Sans', sans-serif;
@@ -13,6 +14,7 @@
     border-bottom: 2px solid #fff;
 }
 .buttonSelected {
+    all:unset;
     font-size: 25px;
     width: 50%;
     font-family: 'Open Sans', sans-serif;

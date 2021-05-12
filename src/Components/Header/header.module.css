@@ -1,22 +1,124 @@
-import React,{ Component } from 'react'
-import Rectangle10 from '../../assets/Rectangle10.png'
-import logo2x from '../../assets/logo@2x.png'
-import styles from './style.module.css'; 
-
-export default class ItemCard extends Component{
-
-    render(){
-        return (
-        <div className={  styles.back }>
-            <div className={  styles.padding }>
-                <img className={  styles.coverImage } src={ Rectangle10 } />
-                <div className={  styles.lightFont }><img className={  styles.innerImage } src={ logo2x } />{this.props.GardenName}</div>
-                <div className={  styles.fruitName }>{this.props.FruitName}</div>
-                <div className={  styles.lightFontLowMargin }>per 1 lb</div>
-                <div className={  styles.price }>${this.props.Price}</div>
-            </div>
-        </div> 
-        )
-    } 
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    z-index: 99999;
+}
+.head{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: inline-flex;
+    width: 10vw;
+    height: 8vh;
+    text-align: center;
+    background-color: #00474f;
+    justify-content: center;
+    border-radius: 0px 25px 25px 0px;
+    color: #fff;
+}
+.headText{
+    font-size: 16px !important;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.searchBox{
+    height: 5vh;
+    display: inline-flex;
+    width: 430px;
+    color: #333;
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    color: #606266;
+    padding-left: 15px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 1vh;
+    margin-left: 15vw;
+}
+.icon{
+    align-self: center;
+    width: 14px;
+    height: 14px;
+}
+.search{
+    all:unset;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 95%;
+}
+.helpIcons{
+    position: fixed;
+    top: 2px;
+    right: 20px;
+}
+.iconHelp{
+    align-self: center;
+    width: 18px;
+    height: 18px;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+}
+.iconHelp:hover{
+    background-color: #d8d8d8;
+}
+.sideBar{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #00474f;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    max-height: 100vh;
+    width: 120px;
+    padding-top: 10vh;
+    z-index: 1;
+    overflow-y: scroll;
+}
+.sideIcon{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-basis: initial;
+    flex: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.sideIcon:hover{
+    background-color: #d8d8d8;
+}
+.iconText{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.sideIcon img{
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+    align-content: center;
+}
+.sideIconHelp{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-basis: initial;
+    flex: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.customSubSideItem{
+    top: 0;
+    position: fixed;
+    overflow-y: scroll;
+    width: 300px;
+    height: 100vh;
 }

@@ -17,6 +17,7 @@ export default class RepairDeskHome extends React.Component{
     login(){
         localStorage.setItem('loggedIn', 'true')
         this.setState(this.state)
+        window.location.href='/home'
     }
 
     render(){
