@@ -28,7 +28,7 @@ export default class RegisterComponent extends React.Component{
                     <label className={ styles.headLabel }>Confirm Password</label>
                     <input className={ styles.text } placeholder="Confirm password" name="LoginForm[username]" type="password" /> 
                 </div>
-                <button className={ styles.buttonAction } onClick={this.props.login} >Register</button>
+                <button className={ styles.buttonAction }>Register</button>
             </div>
         )
     }

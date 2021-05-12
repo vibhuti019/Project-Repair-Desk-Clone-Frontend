@@ -10,7 +10,19 @@ export default class LoginComponent extends React.Component{
         this.state = {
           isShow: true,
         };
-      }
+    }
+
+
+    login() {
+        this.setState(this.state)
+        if( this.state.email === "admin@fleego.in" && this.state.password === "Abhishek@1"){
+            localStorage.setItem('loggedIn', 'true')
+            this.setState(this.state)
+            window.location.href='/home'
+        }else {
+            console.log("Wrong Creds")
+        }
+    }
 
     render(){
         return(
@@ -22,14 +34,14 @@ export default class LoginComponent extends React.Component{
                 <div className = { styles.head } >Login to your account</div>
                 <div className={ styles.inputContainer }>
                     <label className={ styles.headLabel }>Email</label>
-                    <input className={ styles.text } placeholder="Enter email" name="LoginForm[username]" type="text" /> 
+                    <input className={ styles.text } onChange={ (event)=>{this.state.email = event.target.value } } placeholder="Enter email" type="text" /> 
                 </div>
                 <div className={ styles.inputContainer }>
                     <label className={ styles.headLabel }>Password</label>
-                    <input className={ styles.text } placeholder="Enter password" name="LoginForm[username]" type="password" /> 
+                    <input className={ styles.text } placeholder="Enter password" onChange={ (event)=>{this.state.password = event.target.value } } type="password" /> 
                 </div>
                 <div className = { styles.normalText } >Forgot Your Password?</div>
-                <button className = { styles.buttonAction } onClick={this.props.login} >Login</button>
+                <button className = { styles.buttonAction } onClick={ this.login.bind(this) } >Login</button>
             </div>
         )
     }
