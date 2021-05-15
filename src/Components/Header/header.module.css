@@ -76,7 +76,7 @@
     top: 0px;
     left: 0px;
     max-height: 100vh;
-    width: 120px;
+    width: 100px;
     padding-top: 10vh;
     z-index: 1;
     overflow-y: scroll;
@@ -98,10 +98,11 @@
     margin-top: 10px;
     width: 100%;
     text-align: center;
+    font-size: 15px;
 }
 .sideIcon img{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     justify-self: center;
     align-content: center;
 }
@@ -115,10 +116,39 @@
     justify-content: center;
     align-content: center;
 }
-.customSubSideItem{
+.sideItemBar{
     top: 0;
     position: fixed;
     overflow-y: scroll;
     width: 300px;
     height: 100vh;
+    margin-top: 10vh;
+    padding-left: 12vw;
+    height: 85vh;
+    margin-bottom: 20vh;
+    z-index: -1;
+}
+.sideItemBar div{
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 90%;
+    margin-right: 10%;
+    padding: 10px;
+}
+.sideItemHeadText{
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: -30px;
+}
+.sideItemHeadText img{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.sideItemText{
+    font-size: 10px;
+    font-weight: 100;    
+}
+.sideItemText:hover{
+    border-radius: 0px 25px 25px 0px;
+    background-color: rgba(0, 71, 79, 0.2);
 }
