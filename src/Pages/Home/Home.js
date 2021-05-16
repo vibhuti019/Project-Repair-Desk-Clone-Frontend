@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../Components/Header/header'
+import TableComponent from '../../Components/Table/table';
 
 export default class Home extends React.Component{
     
@@ -17,6 +18,7 @@ export default class Home extends React.Component{
         return (
             <div>
                 <Header logout={this.logout.bind(this)}/>
+                <TableComponent />
             </div>
         )
     }

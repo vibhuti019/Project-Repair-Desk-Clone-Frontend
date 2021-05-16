@@ -29,10 +29,12 @@ export default class Header extends Component{
         this.state.activeSideItem = menuName
         this.state.showSideItem = true
         this.setState(this.state)
-        console.log(menuName)
-        console.log(this.state)
     }
 
+    focusOut(){
+      this.state.showSideItem = false
+      this.setState(this.state)
+    }
     render(){
         return (
         <div>
@@ -85,7 +87,7 @@ export default class Header extends Component{
                 </div>
             </div>
           {  this.state.showSideItem &&
-            <div className={ styles.sideItemBar} >
+            <div className={ styles.sideItemBar} onBlur ={ this.focusOut.bind() }>
             
             
               {  this.state.activeSideItem == 'Reports' &&

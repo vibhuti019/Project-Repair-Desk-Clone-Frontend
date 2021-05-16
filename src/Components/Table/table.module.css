@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+.container{
+    margin-top: 12vh;
+    margin-left: 20vw;
+}
+.tableHead {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: inline-flex;
+    width: 95%;
+    position: relative;
+    justify-content: space-between;
+}
+.tableHeadText {
+    font-weight: 900;
+    font-size: larger;
+    justify-self: center;
+    align-self: center;
+    text-rendering: optimizeLegibility;
+}
+.tableHeadOptions {
+    display: inline-flex;
+    padding: 10px;
+}
+.tableHeadOptions div {
+    margin-right: 10px;
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.tableHeadOptions .button {
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
+.tableHeadOptions .buttonFilled{
+    background-color: #00474f;
+    color: #fff;
+}
+.tableMenu{
+    font-family: 'Noto Sans JP', sans-serif;
+    display: inline-flex;
+    width: 95%;
+    position: relative;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    margin-top: 40px;
+}
+.menuItemSelected{
+    border-bottom: 4px solid #00474f;
+    color: #00474f;
+}
+.menuItem{
+    color: #8d8d8d;
+}       
+.tableMenuText{
+    display: inline-flex;
+    font-size: 12px;
+    justify-self: center;
+    align-self: center;
+} 
+.dotOrange{
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #ffc069;
+    margin: auto;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.dotBlue{
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #85a5ff;
+    margin: auto;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.dotRed{
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #ff4d4f;
+    margin: auto;
+    border-radius: 25px;
+    margin-right: 10px;    
+}
+.dotGreen{
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #52c41a;
+    margin: auto;
+    border-radius: 25px;
+    margin-right: 10px;        
+}
+.dotText{
+    margin-right: 20px;
+}
+.mainTable{
+    width: 95%;
+    height: 10vh;
+    font-family: "Noto Sans JP",sans-serif !important;
+    margin-top: 30px;
+}
+.tableScroll {
+    position: relative;
+    width:100%;
+    z-index: 1;
+    margin: auto;
+    overflow: auto;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+}
+.tableScroll table {
+    width: 100%;
+    min-width: 1280px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.tableWcroll {
+    position: relative;
+}
+.tableScroll th,
+.tableScroll td {
+    padding: 10px;
+    border-bottom: 1px solid #ebeef5;
+    background: #fff;
+    vertical-align: top;
+}
+.tableScroll thead th {
+    background: #f5f5f5;
+    color: #252525;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-weight: 900;
+}
+
+a:focus {
+    background: red;
+} /* testing links*/
+
+th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    /* box-shadow: 0 0 10px rgba(0,0,0,.12); */
+    border-right: 1px solid #ebeef5;
+}
+thead th:first-child,
+tfoot th:first-child {
+    z-index: 5;
+}
+th:last-child {
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    /* box-shadow: 0 0 10px rgba(0,0,0,.12); */
+    border-left: 1px solid #ebeef5;
+
+}
+.actionButton img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}

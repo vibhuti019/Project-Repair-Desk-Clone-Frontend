@@ -78,7 +78,7 @@
     max-height: 100vh;
     width: 100px;
     padding-top: 10vh;
-    z-index: 1;
+    z-index: 99;
     overflow-y: scroll;
 }
 .sideIcon{
@@ -126,7 +126,8 @@
     padding-left: 12vw;
     height: 85vh;
     margin-bottom: 20vh;
-    z-index: -1;
+    z-index: 9;
+    background-color: #fff;
 }
 .sideItemBar div{
     font-family: 'Noto Sans JP', sans-serif;
