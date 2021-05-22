@@ -25,15 +25,19 @@ export default class Header extends Component{
         };
       }
 
-    showSubMenu(menuName){
+    showSubMenu(menuName,showSideItem=true){
         this.state.activeSideItem = menuName
-        this.state.showSideItem = true
+        this.state.showSideItem = showSideItem
+        this.className = styles.sideIconActive
+        window.addEventListener("click", this.focusOut.bind(this)); 
         this.setState(this.state)
     }
 
-    focusOut(){
+    focusOut(e){      
       this.state.showSideItem = false
-      this.setState(this.state)
+      window.removeEventListener("click", this); 
+      console.log(e.target.id)
+      // this.setState(this.state)
     }
     render(){
         return (
@@ -55,31 +59,31 @@ export default class Header extends Component{
                 </div>
             </div>
             <div className={ styles.sideBar } >
-                <div className={ styles.sideIcon } >
+                <div id="sidebar" className={ this.state.activeSideItem == 'POS'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'POS',false)} >
                     <img className={ styles.iconSideBar }  src= { newspaper } />
                     <span className={ styles.iconText } >POS</span>
                 </div>
-                <div className={ styles.sideIcon } >
+                <div id="sidebar" className={ this.state.activeSideItem == 'Ticket'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Ticket',false)} >
                     <img className={ styles.iconSideBar }   src= { document } />
                     <span className={ styles.iconText } >Ticket</span>
                 </div>
-                <div className={ styles.sideIcon } onClick={this.showSubMenu.bind(this,'Items')}>
+                <div id="sidebar" className={ this.state.activeSideItem == 'Items'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Items')}>
                     <img className={ styles.iconSideBar } src= { store } />
                     <span className={ styles.iconText } >Items</span>
                 </div>
-                <div className={ styles.sideIcon } onClick={this.showSubMenu.bind(this,'Customers')}>
+                <div id="sidebar" className={ this.state.activeSideItem == 'Customers'?styles.sideIconActive:styles.sideIcon } onClick={this.showSubMenu.bind(this,'Customers')}>
                     <img className={ styles.iconSideBar }  src= { profile } />
                     <span className={ styles.iconText } >Customers</span>
                 </div>
-                <div className={ styles.sideIcon } onClick={this.showSubMenu.bind(this,'Finances')}>
+                <div id="sidebar" className={ this.state.activeSideItem == 'Finances'?styles.sideIconActive:styles.sideIcon } onClick={this.showSubMenu.bind(this,'Finances')}>
                     <img className={ styles.iconSideBar }  src= { dollar } />
                     <span className={ styles.iconText } >Finances</span>
                 </div>
-                <div className={ styles.sideIcon } onClick={this.showSubMenu.bind(this,'Reports')}>
+                <div id="sidebar" className={ this.state.activeSideItem == 'Reports'?styles.sideIconActive:styles.sideIcon } onClick={this.showSubMenu.bind(this,'Reports')}>
                     <img className={ styles.iconSideBar }  src= { report } />
                     <span className={ styles.iconText } >Reports</span>
                 </div>
-                <div className={ styles.sideIcon } >
+                <div id="sidebar" className={ this.state.activeSideItem == 'Settings'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Settings',false)} >
                     <img className={ styles.iconSideBar }  src= { settings } />
                     <span className={ styles.iconText } >Settings</span>
                 </div>
