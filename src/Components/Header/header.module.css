@@ -9,6 +9,7 @@
     justify-items: center;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
     z-index: 99999;
+    background-color: #ffffff;
 }
 .head{
     position: fixed;
@@ -81,8 +82,10 @@
     padding-top: 10vh;
     z-index: 99;
     overflow-x: hidden;
-    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     border-right: 5px solid #cecece;
+    background-color: #ffffff;
 }
 .sideIcon{
     position: relative;
@@ -108,8 +111,8 @@
     border-left: 5px solid #00474f;
 }
 .sideIconActive img{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     justify-self: center;
     align-content: center;
 }
@@ -122,12 +125,12 @@
     margin-bottom: 5px;
     width: 100%;
     text-align: center;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 450;
 }
 .sideIcon img{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     justify-self: center;
     align-content: center;
 }
@@ -145,7 +148,7 @@
     top: 0;
     position: fixed;
     overflow-y: scroll;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     margin-top: 10vh;
     padding-left: 12vw;
@@ -161,7 +164,7 @@
     padding: 10px;
 }
 .sideItemHeadText{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     margin-left: -40px;
     margin-bottom: -10px ;
@@ -172,7 +175,7 @@
     margin-right: 10px;
 }
 .sideItemText{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;    
 }
 .sideItemText:hover{

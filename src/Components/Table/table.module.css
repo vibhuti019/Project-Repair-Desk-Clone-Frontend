@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 .container{
-    margin-top: 12vh;
-    margin-left: 20vw;
+    margin-top: 10vh;
+    margin-left: 10vw;
 }
 .tableHead {
     font-family: 'Noto Sans JP', sans-serif;
@@ -11,22 +11,30 @@
     justify-content: space-between;
 }
 .tableHeadText {
-    font-weight: 900;
-    font-size: larger;
+    font-weight: 400;
+    font-size: 16px;
     justify-self: center;
     align-self: center;
     text-rendering: optimizeLegibility;
 }
 .tableHeadOptions {
     display: inline-flex;
-    padding: 10px;
+    margin: 5px;
+    padding: 3px;
+}
+.tableHeadSearch {
+    display: inline-flex;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.424);
+    padding: 3px;
 }
 .tableHeadOptions div {
     margin-right: 10px;
-    width: 150px;
-    height: 20px;
+    min-width: 100px;
+    height: 22px;
     text-align: center;
-    padding-bottom: 5px;
+    font-size: 12px;
+    padding-top: 2px;
 }
 .tableHeadOptions .button {
     background-color: #ffffff;
@@ -44,7 +52,7 @@
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,.12);
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .menuItemSelected{
     border-bottom: 4px solid #00474f;
@@ -55,7 +63,7 @@
 }       
 .tableMenuText{
     display: inline-flex;
-    font-size: 12px;
+    font-size: 10px;
     justify-self: center;
     align-self: center;
 } 
@@ -116,6 +124,10 @@
     border-collapse: separate;
     border-spacing: 0;
 }
+table * {
+    text-align: center;
+    color: #00474f;
+}
 .tableWcroll {
     position: relative;
 }
@@ -125,6 +137,7 @@
     border-bottom: 1px solid #ebeef5;
     background: #fff;
     vertical-align: top;
+    font-size: 12px;
 }
 .tableScroll thead th {
     background: #f5f5f5;
@@ -132,19 +145,23 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 a:focus {
     background: red;
-} /* testing links*/
+} 
 
 th:first-child {
     position: -webkit-sticky;
     position: sticky;
+    font-weight: 400;
+    font-size: 12px;
     left: 0;
     z-index: 2;
-    /* box-shadow: 0 0 10px rgba(0,0,0,.12); */
+    box-shadow:  rgba(0,0,0,1);
+    /* -webkit-box-shadow: 30px 9px 51px -29px rgba(0,0,0,1);
+    -moz-box-shadow: 30px 9px 51px -29px rgba(0,0,0,1); */
     border-right: 1px solid #ebeef5;
 }
 thead th:first-child,
@@ -161,7 +178,63 @@ th:last-child {
 
 }
 .actionButton img{
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+}
+.search{
+    all:unset;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 95%;
+}
+.icon{
+    align-self: center;
+    width: 14px;
+    height: 14px;
+}
+.tableFooter{
+    position: fixed;
+    margin-left: 10vw;
+    bottom: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: inline-flex;
+    width: 85%;
+    justify-content: space-between;
+    background-color: #f7f8fc;
+}
+.tableFootText{
+    font-weight: 200;
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+    text-rendering: optimizeLegibility;   
+}
+.tableFootOptions {
+    display: inline-flex;
+    margin: 5px;
+}
+.tableFootOptions div {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+    align-items: center;
+}
+.tableFootOptions .button {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #8cb6c7;
+    color: #8cb6c7;
+    justify-content: center;
+    align-content: center;
+}
+.tableFootOptions .buttonFilled{
+    display: flex;
+    background-color: #00474f;
+    color: #fff;
+    border: 1px solid #00474f;
+    justify-content: center;
+    align-content: center;
 }

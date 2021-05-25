@@ -1,20 +1,20 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./table.module.css"
 import edit from "../../assets/tableIcons/edit.svg"
 import remDelete from "../../assets/tableIcons/delete.svg"
-import printer from "../../assets/tableIcons/printer.png"
+import loupe from "../../assets/headerIcons/loupe.svg"
 
 
 export default class TableComponent extends React.Component{
 
     render(){
         return(
-            
+                <div>
                 <div className = { styles.container }>
                     <div className = { styles.tableHead } >
                         <div className = { styles.tableHeadText } >
-                            Manage Ticket
+                            Manage All Tickets
                         </div>
                         <div className = { styles.tableHeadOptions } >
                             <div className = { styles.button } >Export</div>
@@ -22,9 +22,11 @@ export default class TableComponent extends React.Component{
                         </div>
                     </div>
                     <div className = { styles.tableMenu } >
-                        <div className = { styles.tableHeadOptions } >
-                            <div className = { styles.menuItem } >All</div>
-                            <div className = { styles.menuItemSelected } >Repairs</div>
+                        <div className = { styles.tableHeadSearch } >
+                            {/* <div className = { styles.menuItem } >All</div>
+                            <div className = { styles.menuItemSelected } >Repairs</div> */}
+                            <input className={ styles.search } type="text" placeholder="Search" />
+                            <img alt="" className={ styles.icon }  src= { loupe } />
                         </div>
                         <div className = { styles.tableMenuText } >
                             <div className = { styles.dotOrange } ></div>
@@ -55,7 +57,7 @@ export default class TableComponent extends React.Component{
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th>First top Column</th>
+                                    <th>001</th>
                                     <td>Cell content
                                     test </td>
                                     <td><a href="# " >Cell content longer</a></td>
@@ -65,14 +67,13 @@ export default class TableComponent extends React.Component{
                                     <td>Cell content</td>
                                     <th>
                                         <div className = { styles.actionButton } > 
-                                            <img src = { edit } alt="" />
-                                            <img src = { remDelete } alt="" />
-                                            <img src = { printer } alt="" />
+                                            <img alt="" src = { edit } />
+                                            <img alt="" src = { remDelete } />
                                         </div>
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th>Left Column</th>
+                                    <th>002</th>
                                     <td>Cell content</td>
                                     <td>Cell content longer</td>
                                     <td>Cell content</td>
@@ -81,15 +82,13 @@ export default class TableComponent extends React.Component{
                                     <td>Cell content</td>
                                     <th>
                                         <div className = { styles.actionButton } > 
-                                            <img src = { edit } alt="" />
-                                            <img src = { remDelete } alt="" />
-                                            <img src = { printer } alt="" />
+                                            <img alt="" src = { edit } />
+                                            <img alt="" src = { remDelete } />
                                         </div>
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th>Left Column
-                                    last</th>
+                                    <th>003</th>
                                     <td>Cell content</td>
                                     <td>Cell content longer</td>
                                     <td>Cell content</td>
@@ -98,9 +97,8 @@ export default class TableComponent extends React.Component{
                                     <td>Cell content</td>
                                     <th>
                                         <div className = { styles.actionButton } > 
-                                            <img src = { edit } alt="" />
-                                            <img src = { remDelete } alt="" />
-                                            <img src = { printer } alt="" />
+                                            <img alt="" src = { edit } />
+                                            <img alt="" src = { remDelete } />
                                         </div>
                                     </th>
                                 </tr>
@@ -108,6 +106,18 @@ export default class TableComponent extends React.Component{
                             </table>
                         </div>
                     </div>
+                    
+                </div>
+                <div className = { styles.tableFooter } >
+                    <div className = { styles.tableFootText } >
+                        Showing 2 of 2
+                    </div>
+                    <div className = { styles.tableFootOptions } >
+                        <div className = { styles.button } >&lt;</div>
+                        <div className = { styles.buttonFilled } >1</div>
+                        <div className = { styles.button } >&gt;</div>
+                    </div>
+                </div>
                 </div>
     )
     }
