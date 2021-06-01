@@ -15,6 +15,8 @@ import loupe from "../../assets/headerIcons/loupe.svg"
 import newspaper from "../../assets/headerIcons/newspaper.svg"
 import store from "../../assets/headerIcons/store.svg"
 import cube from "../../assets/headerIcons/cube.svg"
+import AutoComplete from "../../Components/AutoComplete/autocomplete"
+
 
 export default class Header extends Component{
     constructor(props) {
@@ -49,8 +51,7 @@ export default class Header extends Component{
                     <span className={ styles.headText } >Company</span>
                 </div>
                 <div className={ styles.searchBox } >
-                    <input className={ styles.search } type="text" placeholder="Global Search" />
-                    <img alt="" className={ styles.icon }  src= { loupe } />
+                  <AutoComplete DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Global Search"} />                  
                 </div>
                 <div className={ styles.helpIcons } >
                     <img alt="" className={ styles.iconHelp }  src= { info } />

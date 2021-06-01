@@ -8,6 +8,51 @@ import loupe from "../../assets/headerIcons/loupe.svg"
 
 export default class TableComponent extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            headings : [
+                {
+                    name: "Id",
+                    type: "Normal"
+                },
+                {
+                    name: "Models",
+                    type: "Normal"
+                },
+                {
+                    name: "Service",
+                    type: "Normal"
+                },
+                {
+                    name: "Status",
+                    type: "Status"
+                },
+                {
+                    name: "Assigned To",
+                    type: "Drop Down"
+                },
+                {
+                    name: "Due Date",
+                    type: "Date Box"
+                },
+                {
+                    name: "Customer",
+                    type: "Normal"
+                },
+                {
+                    name: "Total",
+                    type: "Normal"
+                },
+                {
+                    name: "Actions",
+                    type: "Normal"
+                }
+            ]
+        }  
+    }
+
+
     render(){
         return(
                 <div>
@@ -45,6 +90,9 @@ export default class TableComponent extends React.Component{
                             <table id="main-table" className = { styles.mainTable } >
                                 <thead>
                                 <tr>
+                                    {/* Here itearation needs to be added */}
+
+                                    
                                     <th scope="col" >ID</th>
                                     <th scope="col" >Head 1</th>
                                     <th scope="col" >Head 2</th>

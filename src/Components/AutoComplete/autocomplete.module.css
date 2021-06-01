@@ -1,0 +1,60 @@
+.searchBox{
+    display: inline-flex;
+    width: 430px;
+    height: 30px;
+    color: #333;
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    color: #606266;
+    padding-left: 15px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 1vh;
+    background-color: #fff;
+}
+.icon{
+    align-self: center;
+    width: 14px;
+    height: 14px;
+}
+.search{
+    all:unset;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+}
+.invoiceSearchDataList{
+    all:unset;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 95%;
+    background-color: lightblue;
+}
+
+.autocomplete {
+    width: inherit;
+    position: absolute;
+    display: inline-block;
+}
+.autocompleteItems {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: -10px;
+    right: 0;
+    background-color: #fff;
+}
+.autocompleteItems div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocompleteItems div:hover {
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
