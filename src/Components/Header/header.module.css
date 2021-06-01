@@ -115,6 +115,7 @@ html{
     border-left: 5px solid #00474f;
 }
 .iconText{
+    color:#00474f;
     margin-top: 3px;
     margin-bottom: 5px;
     width: 100%;
@@ -151,7 +152,13 @@ html{
     margin-bottom: 20vh;
     z-index: 9;
     background-color: #fff;
-    transition: linear 1s;
+    transition: all linear 1s;
+    animation: moveRight 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes moveRight {
+    from {left: -350px;}
+    to {left: 0px;}
 }
 .sideItemBar div{
     font-family: 'Noto Sans JP', sans-serif;

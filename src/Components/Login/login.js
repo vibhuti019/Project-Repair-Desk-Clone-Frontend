@@ -18,7 +18,7 @@ export default class LoginComponent extends React.Component{
         if( this.state.email === "admin@fleego.in" && this.state.password === "Abhishek@1"){
             localStorage.setItem('loggedIn', 'true')
             this.setState(this.state)
-            window.location.href='/home'
+            window.location.href='/dashboard'
         }else {
             console.log("Wrong Creds")
         }

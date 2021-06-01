@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 import bell from "../../assets/headerIcons/bell.svg"
 import profile from "../../assets/headerIcons/profile.svg"
@@ -63,14 +63,18 @@ export default class Header extends Component{
                 </div>
             </div>
             <div className={ styles.sideBar } >
-                <div id="sidebar" className={ this.state.activeSideItem === 'POS'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'POS',false)} >
-                    <img alt="" className={ styles.iconSideBar }  src= { newspaper } />
-                    <span className={ styles.iconText } >POS</span>
-                </div>
-                <div id="sidebar" className={ this.state.activeSideItem === 'Ticket'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Ticket',false)} >
-                    <img alt="" className={ styles.iconSideBar }   src= { documentIcon } />
-                    <span className={ styles.iconText } >Ticket</span>
-                </div>
+                <Link to="/dashboard/home" style={{textDecoration: "none",color:"inherit" }}>
+                  <div id="sidebar" className={ this.state.activeSideItem === 'POS'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'POS',false)} >
+                      <img alt="" className={ styles.iconSideBar }  src= { newspaper } />
+                      <span className={ styles.iconText } >POS</span>
+                  </div>
+                </Link>
+                <Link to="/dashboard/ticket" style={{textDecoration: "none",color:"inherit" }}>
+                  <div id="sidebar" className={ this.state.activeSideItem === 'Ticket'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Ticket',false)} >
+                      <img alt="" className={ styles.iconSideBar }   src= { documentIcon } />
+                      <span className={ styles.iconText } >Ticket</span>
+                  </div>
+                </Link>
                 <div id="sidebar" className={ this.state.activeSideItem === 'Items'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Items')}>
                     <img alt="" className={ styles.iconSideBar } src= { store } />
                     <span className={ styles.iconText } >Items</span>
@@ -87,10 +91,12 @@ export default class Header extends Component{
                     <img alt="" className={ styles.iconSideBar }  src= { report } />
                     <span className={ styles.iconText } >Reports</span>
                 </div>
+                <Link to="/dashboard/settings" style={{textDecoration: "none",color:"inherit" }}>
                 <div id="sidebar" className={ this.state.activeSideItem === 'Settings'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Settings',false)} >
                     <img alt="" className={ styles.iconSideBar }  src= { settings } />
                     <span className={ styles.iconText } >Settings</span>
                 </div>
+                </Link>                
                 <div className={ styles.sideIconHelp } >
                 </div>
             </div>
@@ -100,81 +106,117 @@ export default class Header extends Component{
               {  this.state.activeSideItem === 'Reports' &&
                 <span>
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Overview</div>
-                <div className={ styles.sideItemText} >Dashboard</div>
-                <div className={ styles.sideItemText} >Multi-Store Report</div>
-                <div className={ styles.sideItemText} >All Reports</div>
-
+                <Link to="/dashboard/report/dashboard" style={{textDecoration: "none",color:"inherit",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Dashboard</div>
+                </Link>
+                <Link to="/dashboard/report/multistore" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Multi-Store Report</div>
+                </Link>
+                
+                
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Sales Reports</div>
-                <div className={ styles.sideItemText} >Sales Summary</div>
-                <div className={ styles.sideItemText} >Sales By Item</div>
-                <div className={ styles.sideItemText} >All Sales Report</div>
+                <Link to="/dashboard/report/salessummary" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Sales Summary</div>
+                </Link>
+                <Link to="/dashboard/report/salesbyitem" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Sales By Item</div>
+                </Link>
+                
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Inventory Reports</div>
-                <div className={ styles.sideItemText} >Inventory Summary</div>
-                <div className={ styles.sideItemText} >Low Stock</div>
-                <div className={ styles.sideItemText} >All Inventory Reports</div>
+                <Link to="/dashboard/report/inventory" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Inventory Summary</div>
+                </Link>
+                <Link to="/dashboard/report/lowstock" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Low Stock</div>
+                </Link>
+                
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Employee Reports</div>
-                <div className={ styles.sideItemText} >Employee Activity Logs</div>
-                <div className={ styles.sideItemText} >Employee Payrolls</div>
-                <div className={ styles.sideItemText} >All Employee Reports</div>
+                <Link to="/dashboard/report/employeeactivity" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Employee Activity Logs</div>
+                </Link>
+                <Link to="/dashboard/report/employeepayrolls" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Employee Payrolls</div>
+                </Link>
                 </span>
               }
                 
               {  this.state.activeSideItem === 'Finances' &&
                 <span>
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Invoices</div>
-                <div className={ styles.sideItemText} >All Invoices</div>
+                <Link to="/dashboard/finance/allinvoices" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >All Invoices</div>
+                </Link>
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Store Finances</div>
-                <div className={ styles.sideItemText} >Expenses</div>
-                <div className={ styles.sideItemText} >Cash In/Out</div>
+                <Link to="/dashboard/finances/expenses" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Expenses</div>
+                </Link>
+                <Link to="/dashboard/report/cashinout" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Cash In/Out</div>
+                </Link>
                 </span>
               }
 
               {  this.state.activeSideItem === 'Customers' &&
                 <span>
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Customers</div>
-                <div className={ styles.sideItemText} >All Customers</div>
-                <div className={ styles.sideItemText} >Customer Groups</div>
-
-                {/* <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Leads</div>
-                <div className={ styles.sideItemText} >Appointments</div> */}
-
+                <Link to="/dashboard/customers/allcustomers" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >All Customers</div>
+                </Link>
+                <Link to="/dashboard/customers/customergroups" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Customer Groups</div>
+                </Link>
+                
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Quotes</div>
-                <div className={ styles.sideItemText} >Repair Estimates</div>
+                <Link to="/dashboard/customers/estimates" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Repair Estimates</div>
+                </Link>
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Customer Widgets</div>
-                {/* <div className={ styles.sideItemText} >Appointment Calender</div>
-                <div className={ styles.sideItemText} >Customer Facing Display</div>
-                <div className={ styles.sideItemText} >Ticket Counter Display</div>
-                <div className={ styles.sideItemText} >Repair Tracker</div>
-                <div className={ styles.sideItemText} >Customer Portal (If Reqd)</div> */}
-                <div className={ styles.sideItemText} >Email Compaigner</div>
+                <Link to="/dashboard/customers/campaigner" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Email Compaigner</div>
+                </Link>
                 </span>
               }
 
               {  this.state.activeSideItem === 'Items' &&
                 <span>
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Items</div>
-                <div className={ styles.sideItemText} >Products</div>
-                <div className={ styles.sideItemText} >Services</div>
-                <div className={ styles.sideItemText} >Repair Parts</div>
-                {/* <div className={ styles.sideItemText} >Buy Backs</div>
-                <div className={ styles.sideItemText} >Gift Cards</div> */}
-                <div className={ styles.sideItemText} >Items Bundles</div>
-                {/* <div className={ styles.sideItemText} >Special Orders</div> */}
+                <Link to="/dashboard/item/products" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Products</div>
+                </Link>
+                <Link to="/dashboard/item/services" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Services</div>
+                </Link>
+                <Link to="/dashboard/item/repairpart" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Repair Parts</div>
+                </Link>
+                <Link to="/dashboard/item/itembundle" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Items Bundles</div>
+                </Link>
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Supply Chain</div>
-                <div className={ styles.sideItemText} >Purchase Orders(PO)</div>
-                <div className={ styles.sideItemText} >Goods Recieved Notes(GRN)</div>
-                <div className={ styles.sideItemText} >Supplier Returns</div>
+                <Link to="/dashboard/item/puchaseorder" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Purchase Orders(PO)</div>
+                </Link>
+                <Link to="/dashboard/item/grn" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Goods Recieved Notes(GRN)</div>
+                </Link>
+                <Link to="/dashboard/item/supplierreturn" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Supplier Returns</div>
+                </Link>
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage MultiStore Inventory</div>
-                <div className={ styles.sideItemText} >Transfer Inventory</div>
+                <Link to="/dashboard/item/multistoreinventory" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Transfer Inventory</div>
+                </Link>
 
                 <div className={ styles.sideItemHeadText} ><img alt="" src= { cube } />Manage Stock-takes</div>
-                <div className={ styles.sideItemText} >Inventory Count</div>
+                <Link to="/dashboard/item/inventorycount" style={{textDecoration: "none",color:"inherit" }}>
+                  <div className={ styles.sideItemText} >Inventory Count</div>
+                </Link>
                 </span>
               }
             </div>
@@ -182,14 +224,4 @@ export default class Header extends Component{
         </div>
         )
     } 
-    componentDidUpdate(){
-        console.log(document.getElementsByName("sideItemBar")[0].style.left)
-
-        if(this.state.showSideItem){
-          while(document.getElementsByName("sideItemBar")[0].style.left<0){
-            console.log(document.getElementsByName("sideItemBar")[0].style.left)
-            document.getElementsByName("sideItemBar")[0].style.left = document.getElementsByName("sideItemBar")[0].style.left + 10
-        }
-      }
-    }
 }

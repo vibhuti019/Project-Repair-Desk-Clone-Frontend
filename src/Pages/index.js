@@ -25,8 +25,7 @@ const Routes = (props) => {
         {/* Admin Routes End */}
 
         <ProtectedRoute
-          exact={true}
-          path="/home"
+          path="/dashboard"
           component={Home}
         />
       </Switch>
