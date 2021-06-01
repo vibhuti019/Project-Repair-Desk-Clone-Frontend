@@ -24,7 +24,7 @@ export default class PointOfSale extends React.Component{
                                 <div className={ styles.openATicketHead }>
                                     Search All Open Ticket Or Invoices
                                 </div>
-                                <AutoComplete DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Enter Invoice Or Ticket Number"} />                  
+                                <AutoComplete DropDownData={["A","AA","AAA","AAAAA","ABBBA"]} defaultText={"Enter Invoice Or Ticket Number"} name="AutocompletePointOfSale"/>                  
                             </div>
                         </div>
                         <div style={ {display: "inline-flex"} }>

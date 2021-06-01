@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../Components/Header/header'
 import PointOfSale from '../../Components/POS/pointOfSale'
+import TableComponent from '../../Components/Table/table'
 import { Switch,Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
@@ -24,7 +25,7 @@ export default class Home extends React.Component{
                 {/* <TableComponent /> */}
                 <Switch>
                     <Route component={PointOfSale} path="/dashboard/home"></Route>
-                    <Route component={PointOfSale} path="/dashboard/ticket"></Route>
+                    <Route component={TableComponent} data path="/dashboard/ticket"></Route>
                     <Route component={PointOfSale} path="/dashboard/settings"></Route>
                 </Switch>
                 {/* <Switch>

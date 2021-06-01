@@ -4,6 +4,8 @@ import styles from "./table.module.css"
 import edit from "../../assets/tableIcons/edit.svg"
 import remDelete from "../../assets/tableIcons/delete.svg"
 import loupe from "../../assets/headerIcons/loupe.svg"
+import AutoComplete from "../../Components/AutoComplete/autocomplete"
+
 
 
 export default class TableComponent extends React.Component{
@@ -68,10 +70,7 @@ export default class TableComponent extends React.Component{
                     </div>
                     <div className = { styles.tableMenu } >
                         <div className = { styles.tableHeadSearch } >
-                            {/* <div className = { styles.menuItem } >All</div>
-                            <div className = { styles.menuItemSelected } >Repairs</div> */}
-                            <input className={ styles.search } type="text" placeholder="Search" />
-                            <img alt="" className={ styles.icon }  src= { loupe } />
+                          <AutoComplete DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Global Search"} name="AutocompleteDataTable"/>                  
                         </div>
                         <div className = { styles.tableMenuText } >
                             <div className = { styles.dotOrange } ></div>

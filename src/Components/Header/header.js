@@ -52,7 +52,7 @@ export default class Header extends Component{
                     <span className={ styles.headText } >Company</span>
                 </div>
                 <div className={ styles.searchBox } >
-                  <AutoComplete DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Global Search"} />                  
+                  <AutoComplete name={ "AutocompleteDataHeader" } DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Global Search"} />                  
                 </div>
                 <div className={ styles.helpIcons } >
                     <img alt="" className={ styles.iconHelp }  src= { info } />
