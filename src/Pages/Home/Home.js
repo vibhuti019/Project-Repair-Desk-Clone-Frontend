@@ -26,7 +26,7 @@ export default class Home extends React.Component{
                     <Route component={PointOfSale} path="/dashboard/home"></Route>
                     <Route component={PointOfSale} path="/dashboard/ticket"></Route>
                     <Route component={PointOfSale} path="/dashboard/settings"></Route>
-                </Switch>,
+                </Switch>
                 {/* <Switch>
                     <Route path="/dashboard/home" component={PointOfSale} />
                     <Route path="/dashboard/Ticket">

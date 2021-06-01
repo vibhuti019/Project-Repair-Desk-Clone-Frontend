@@ -92,10 +92,10 @@ export default class Header extends Component{
                     <span className={ styles.iconText } >Reports</span>
                 </div>
                 <Link to="/dashboard/settings" style={{textDecoration: "none",color:"inherit" }}>
-                <div id="sidebar" className={ this.state.activeSideItem === 'Settings'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Settings',false)} >
-                    <img alt="" className={ styles.iconSideBar }  src= { settings } />
-                    <span className={ styles.iconText } >Settings</span>
-                </div>
+                  <div id="sidebar" className={ this.state.activeSideItem === 'Settings'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Settings',false)} >
+                      <img alt="" className={ styles.iconSideBar }  src= { settings } />
+                      <span className={ styles.iconText } >Settings</span>
+                  </div>
                 </Link>                
                 <div className={ styles.sideIconHelp } >
                 </div>
