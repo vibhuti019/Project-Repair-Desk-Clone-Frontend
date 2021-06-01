@@ -3,7 +3,7 @@ import React,{ Component } from 'react'
 import styles from "./header.module.css";
 import bell from "../../assets/headerIcons/bell.svg"
 import profile from "../../assets/headerIcons/profile.svg"
-import document from "../../assets/headerIcons/document.svg"
+import documentIcon from "../../assets/headerIcons/document.svg"
 import profileUser from "../../assets/headerIcons/profile-user.svg"
 import dollar from "../../assets/headerIcons/dollar.svg"
 import question from "../../assets/headerIcons/question.svg"
@@ -28,6 +28,7 @@ export default class Header extends Component{
         };
       }
 
+    
     showSubMenu(menuName,showSideItem=true){
         this.state.activeSideItem = menuName
         this.state.showSideItem = showSideItem
@@ -67,7 +68,7 @@ export default class Header extends Component{
                     <span className={ styles.iconText } >POS</span>
                 </div>
                 <div id="sidebar" className={ this.state.activeSideItem === 'Ticket'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Ticket',false)} >
-                    <img alt="" className={ styles.iconSideBar }   src= { document } />
+                    <img alt="" className={ styles.iconSideBar }   src= { documentIcon } />
                     <span className={ styles.iconText } >Ticket</span>
                 </div>
                 <div id="sidebar" className={ this.state.activeSideItem === 'Items'?styles.sideIconActive:styles.sideIcon} onClick={this.showSubMenu.bind(this,'Items')}>
@@ -94,8 +95,7 @@ export default class Header extends Component{
                 </div>
             </div>
           {  this.state.showSideItem &&
-            <div className={ styles.sideItemBar} onBlur ={ this.focusOut.bind() }>
-            
+            <div name="sideItemBar" className={ styles.sideItemBar} style={ {left: "-350px"} } onBlur ={ this.focusOut.bind() }>
             
               {  this.state.activeSideItem === 'Reports' &&
                 <span>
@@ -182,5 +182,14 @@ export default class Header extends Component{
         </div>
         )
     } 
+    componentDidUpdate(){
+        console.log(document.getElementsByName("sideItemBar")[0].style.left)
 
+        if(this.state.showSideItem){
+          while(document.getElementsByName("sideItemBar")[0].style.left<0){
+            console.log(document.getElementsByName("sideItemBar")[0].style.left)
+            document.getElementsByName("sideItemBar")[0].style.left = document.getElementsByName("sideItemBar")[0].style.left + 10
+        }
+      }
+    }
 }

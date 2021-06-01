@@ -31,19 +31,14 @@ export default class Home extends React.Component{
                                 <AutoComplete DropDownData={["A","AA","AAA","AAAAA","AAAAA"]} defaultText={"Enter Invoice Or Ticket Number"} />                  
                             </div>
                         </div>
-                        <div className = { styles.dataContainer } >
-                            <div className = { styles.openATicketContainer }>
-                                <div className={ styles.openATicketHead }>
-                                    Search All Open Ticket Or Invoices
-                                </div>
+                        <div style={ {display: "inline-flex"} }>
+                            <div className ={ styles.dataButton }>
+                                <p>Create A Ticket</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="white--text test-icon icon icon-tabler icon-tabler-chevron-right">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <polyline points="9 6 15 12 9 18"></polyline> </svg>
                             </div>
-                            <div>
-                                <div>
-
-                                </div>
-                                <div>
-                                    
-                                </div>
+                            <div className ={ styles.dataButton }>
+                                <p>Sell Product</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="white--text test-icon icon icon-tabler icon-tabler-chevron-right">   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>   <polyline points="9 6 15 12 9 18"></polyline> </svg>
                             </div>
                         </div>
                     </div>

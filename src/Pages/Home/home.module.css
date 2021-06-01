@@ -47,7 +47,7 @@
     margin-top: 2vh;
     width: 40vw;
     height: 30vh;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #ffffff;
     justify-self: center;
     display: flex;
@@ -66,8 +66,18 @@
     padding: 14px 15px 14px 20px !important;
     background-repeat: no-repeat;
     box-sizing: inherit;
-    
+    height: 10px;
+    justify-self: center;
+    align-self: center;
+    color: #fff;
+    width: 15vw;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.dataButton p{
-
+.dataButton svg{
+    margin-right: 20px;
+}
+.dataButton:hover svg{
+    margin-right: 0px;
+    transition: linear 0.5s;
 }

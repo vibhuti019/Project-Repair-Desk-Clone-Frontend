@@ -140,6 +140,7 @@ html{
 }
 .sideItemBar{
     top: 0;
+    left: -350px;
     position: fixed;
     overflow-y: scroll;
     width: 250px;
@@ -150,6 +151,7 @@ html{
     margin-bottom: 20vh;
     z-index: 9;
     background-color: #fff;
+    transition: linear 1s;
 }
 .sideItemBar div{
     font-family: 'Noto Sans JP', sans-serif;
